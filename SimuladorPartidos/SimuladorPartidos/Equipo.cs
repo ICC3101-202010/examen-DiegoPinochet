@@ -31,6 +31,7 @@ namespace SimuladorPartidos
         public Medico Medic { get => medic; set => medic = value; }
         public string NationOrLeague { get => nationOrLeague; set => nationOrLeague = value; }
         public bool NationalTeam { get => nationalTeam; set => nationalTeam = value; }
+        public string Name { get => name; set => name = value; }
 
         public string AddPlayer(Jugador player)
         {

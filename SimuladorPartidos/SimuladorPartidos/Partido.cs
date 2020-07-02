@@ -12,6 +12,7 @@ namespace SimuladorPartidos
         private Equipo equipo2;
         private double time;
         private List<int> score;
+        private string matchType;
 
         public Partido(Entrenador entrenador)
         {
@@ -32,17 +33,25 @@ namespace SimuladorPartidos
             if(equipo1.NationalTeam == true && equipo2.NationalTeam == true)
             {
                 Console.WriteLine("Play");
+                matchType = "National";
                 return true;
             }
             else if(equipo1.NationalTeam == false && equipo2.NationalTeam == false)
             {
                 Console.WriteLine("Play");
-                    return true;
+                matchType = "League";
+                return true;
             }
             else
             {
+                Console.WriteLine("No play");
                 return false;
             }
+        }
+        public override string ToString()
+        {
+            string result = "Match: " + matchType + "\nTime: " + time + "\nTeam 1:" + equipo1.Name + "\nTeam 2:" + equipo2.Name;
+            return result;
         }
     }
 }
