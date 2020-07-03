@@ -135,7 +135,7 @@ namespace SimuladorPartidos
                         cont++;
                     }
                 }
-                if(cont == 14)
+                if(cont == players.Count())
                 {
                     allchecked = "All players are from the team Nacionality";
                 }

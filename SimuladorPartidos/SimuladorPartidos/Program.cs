@@ -10,6 +10,8 @@ namespace SimuladorPartidos
     {
         static void Main(string[] args)
         {
+            
+
         }
     }
 }
