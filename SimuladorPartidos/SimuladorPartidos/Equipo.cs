@@ -20,10 +20,15 @@ namespace SimuladorPartidos
         private string nationOrLeague;
         private int matchScore;
 
-        public Equipo(string name, bool nationalTeam)
+        public Equipo(string name, bool nationalTeam, Entrenador entrenador, Medico medico)
         {
             this.name = name;
             this.nationalTeam = nationalTeam;
+            foreach(Jugador jugador in players)
+            {
+                jugador.InjuryNotified += entrenador.OnInjuryNotified;
+                jugador.InjuryNotified += medico.OnInjuryNotified;
+            }
         }
 
         public List<Jugador> Players { get => players; set => players = value; }

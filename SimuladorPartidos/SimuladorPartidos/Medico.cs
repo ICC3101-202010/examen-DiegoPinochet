@@ -11,9 +11,13 @@ namespace SimuladorPartidos
 
         private int exp;
         private bool treatingPlayer;
-        public Medico(Jugador jugador)
+        public Medico(string name, int edad, string nacionalidad, int sueldo, int exp)
         {
-            jugador.InjuryNotified += OnInjuryNotified;
+            this.name = name;
+            this.age = edad;
+            this.nacionality = nacionalidad;
+            this.salary = sueldo;
+            this.exp = exp;
         }
 
         

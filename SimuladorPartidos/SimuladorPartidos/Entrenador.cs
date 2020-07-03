@@ -13,9 +13,13 @@ namespace SimuladorPartidos
         
         private int tp;
         private bool injuredPlayer;
-        public Entrenador(Jugador jugador)
+        public Entrenador(string name, int edad, string nacionalidad, int sueldo, int tp)
         {
-            jugador.InjuryNotified += OnInjuryNotified;
+            this.name = name;
+            this.age = edad;
+            this.nacionality = nacionalidad;
+            this.salary = sueldo;
+            this.tp = tp;
         }
 
         public void OnInjuryNotified(object sender, EventArgs e)
